@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace L20250217
 {
-    public class Goal : GameObject
+    public class Collider2D : Component
     {
-        public Goal(int inX, int inY, char inShape)
+        public bool isTrigger = false;
+        public override void Update()
         {
-            X = inX;
-            Y = inY;
-            Shape = inShape;
+            
         }
     }
 }
