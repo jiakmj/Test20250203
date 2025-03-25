@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 using System.Threading;
+using Newtonsoft.Json;
 using SDL2;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -222,6 +223,28 @@ namespace L20250217
             world.Sort();
 
             Awake();
+
+            //json
+            //string SceneFile = JsonConvert.SerializeObject(world.GetAllGameObjects, new JsonSerializerSettings 
+            //{
+            //    TypeNameHandling = TypeNameHandling.All,
+            //    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,                
+            //});
+            //Console.WriteLine(SceneFile);
+
+            //StreamWriter sw = new StreamWriter("sample.uasset");
+            //sw.WriteLine(SceneFile);
+            //sw.Close();
+
+            //StreamReader sr2 = new StreamReader("sample.uasset");
+            //string SceneFile = sr2.ReadToEnd();
+            //sr2.Close();
+
+            //world.GetAllGameObjects = JsonConvert.DeserializeObject<List<GameObject>>(SceneFile, new JsonSerializerSettings
+            //{
+            //    TypeNameHandling = TypeNameHandling.All,
+            //    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+            //});
         }       
 
         public void ProcessInput()
